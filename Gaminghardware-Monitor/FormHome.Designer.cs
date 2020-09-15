@@ -33,10 +33,13 @@
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButtonCPU = new FontAwesome.Sharp.IconButton();
             this.panelHead = new System.Windows.Forms.Panel();
             this.iconButtonHome = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.iconButtonMaximize = new FontAwesome.Sharp.IconButton();
+            this.iconButtonMinimize = new FontAwesome.Sharp.IconButton();
+            this.iconButtonClose = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
@@ -53,7 +56,7 @@
             this.panelMenu.Controls.Add(this.iconButton4);
             this.panelMenu.Controls.Add(this.iconButton3);
             this.panelMenu.Controls.Add(this.iconButton2);
-            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.iconButtonCPU);
             this.panelMenu.Controls.Add(this.panelHead);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -85,6 +88,7 @@
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Visible = false;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // iconButton4
@@ -111,6 +115,7 @@
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Visible = false;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton3
@@ -137,6 +142,7 @@
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Visible = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
@@ -163,33 +169,34 @@
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Visible = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // iconButton1
+            // iconButtonCPU
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Microchip;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconSize = 38;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 120);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(220, 85);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconButtonCPU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.iconButtonCPU.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButtonCPU.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonCPU.FlatAppearance.BorderSize = 0;
+            this.iconButtonCPU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonCPU.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonCPU.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonCPU.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonCPU.IconChar = FontAwesome.Sharp.IconChar.Microchip;
+            this.iconButtonCPU.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonCPU.IconSize = 38;
+            this.iconButtonCPU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonCPU.Location = new System.Drawing.Point(0, 120);
+            this.iconButtonCPU.Name = "iconButtonCPU";
+            this.iconButtonCPU.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButtonCPU.Rotation = 0D;
+            this.iconButtonCPU.Size = new System.Drawing.Size(220, 85);
+            this.iconButtonCPU.TabIndex = 1;
+            this.iconButtonCPU.Text = "CPU Monitor";
+            this.iconButtonCPU.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonCPU.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonCPU.UseVisualStyleBackColor = false;
+            this.iconButtonCPU.Click += new System.EventHandler(this.iconButtonCPU_Click);
             // 
             // panelHead
             // 
@@ -223,6 +230,9 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+            this.panelTitleBar.Controls.Add(this.iconButtonMaximize);
+            this.panelTitleBar.Controls.Add(this.iconButtonMinimize);
+            this.panelTitleBar.Controls.Add(this.iconButtonClose);
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -231,6 +241,68 @@
             this.panelTitleBar.Size = new System.Drawing.Size(984, 80);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // iconButtonMaximize
+            // 
+            this.iconButtonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButtonMaximize.FlatAppearance.BorderSize = 0;
+            this.iconButtonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonMaximize.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.iconButtonMaximize.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonMaximize.IconSize = 26;
+            this.iconButtonMaximize.Location = new System.Drawing.Point(916, 0);
+            this.iconButtonMaximize.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButtonMaximize.Name = "iconButtonMaximize";
+            this.iconButtonMaximize.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.iconButtonMaximize.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.iconButtonMaximize.Rotation = 0D;
+            this.iconButtonMaximize.Size = new System.Drawing.Size(34, 26);
+            this.iconButtonMaximize.TabIndex = 4;
+            this.iconButtonMaximize.UseVisualStyleBackColor = true;
+            this.iconButtonMaximize.Click += new System.EventHandler(this.iconButtonMaximize_Click);
+            // 
+            // iconButtonMinimize
+            // 
+            this.iconButtonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButtonMinimize.FlatAppearance.BorderSize = 0;
+            this.iconButtonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonMinimize.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconButtonMinimize.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonMinimize.IconSize = 26;
+            this.iconButtonMinimize.Location = new System.Drawing.Point(882, 0);
+            this.iconButtonMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButtonMinimize.Name = "iconButtonMinimize";
+            this.iconButtonMinimize.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.iconButtonMinimize.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.iconButtonMinimize.Rotation = 0D;
+            this.iconButtonMinimize.Size = new System.Drawing.Size(34, 26);
+            this.iconButtonMinimize.TabIndex = 3;
+            this.iconButtonMinimize.UseVisualStyleBackColor = true;
+            this.iconButtonMinimize.Click += new System.EventHandler(this.iconButtonMinimize_Click);
+            // 
+            // iconButtonClose
+            // 
+            this.iconButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonClose.FlatAppearance.BorderSize = 0;
+            this.iconButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconButtonClose.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonClose.IconSize = 26;
+            this.iconButtonClose.Location = new System.Drawing.Point(950, 0);
+            this.iconButtonClose.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButtonClose.Name = "iconButtonClose";
+            this.iconButtonClose.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.iconButtonClose.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.iconButtonClose.Rotation = 0D;
+            this.iconButtonClose.Size = new System.Drawing.Size(34, 26);
+            this.iconButtonClose.TabIndex = 2;
+            this.iconButtonClose.UseVisualStyleBackColor = true;
+            this.iconButtonClose.Click += new System.EventHandler(this.iconButtonClose_Click);
             // 
             // lblTitleChildForm
             // 
@@ -286,7 +358,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButtonCPU;
         private System.Windows.Forms.Panel panelHead;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
@@ -297,6 +369,9 @@
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private System.Windows.Forms.Label lblTitleChildForm;
         private System.Windows.Forms.Panel panelDesktop;
+        private FontAwesome.Sharp.IconButton iconButtonClose;
+        private FontAwesome.Sharp.IconButton iconButtonMaximize;
+        private FontAwesome.Sharp.IconButton iconButtonMinimize;
     }
 }
 

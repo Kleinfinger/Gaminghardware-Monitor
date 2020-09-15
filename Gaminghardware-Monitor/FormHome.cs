@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,11 @@ namespace GaminghardwareMonitor
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 85);
             panelMenu.Controls.Add(leftBorderBtn);
+            //Form
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         //Mehods
@@ -83,7 +89,7 @@ namespace GaminghardwareMonitor
             lblTitleChildForm.Text = childForm.Text;
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void iconButtonCPU_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(99, 209, 180));
             OpenChildForm(new FormCPUMonitor());
@@ -130,9 +136,38 @@ namespace GaminghardwareMonitor
             lblTitleChildForm.Text = "Home";
         }
 
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        private void iconButtonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconButtonMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            } else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void iconButtonMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

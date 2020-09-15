@@ -52,7 +52,7 @@
             // 
             this.labelCPU.AutoSize = true;
             this.labelCPU.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCPU.Location = new System.Drawing.Point(150, 330);
+            this.labelCPU.Location = new System.Drawing.Point(20, 215);
             this.labelCPU.Name = "labelCPU";
             this.labelCPU.Size = new System.Drawing.Size(192, 42);
             this.labelCPU.TabIndex = 0;
@@ -68,16 +68,16 @@
             this.circularProgressBarCPU.InnerColor = System.Drawing.Color.Transparent;
             this.circularProgressBarCPU.InnerMargin = 2;
             this.circularProgressBarCPU.InnerWidth = -1;
-            this.circularProgressBarCPU.Location = new System.Drawing.Point(105, 34);
+            this.circularProgressBarCPU.Location = new System.Drawing.Point(12, 12);
             this.circularProgressBarCPU.MarqueeAnimationSpeed = 2000;
             this.circularProgressBarCPU.Name = "circularProgressBarCPU";
             this.circularProgressBarCPU.OuterColor = System.Drawing.Color.Gainsboro;
             this.circularProgressBarCPU.OuterMargin = -25;
             this.circularProgressBarCPU.OuterWidth = 26;
-            this.circularProgressBarCPU.ProgressColor = System.Drawing.Color.Gray;
+            this.circularProgressBarCPU.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(209)))), ((int)(((byte)(180)))));
             this.circularProgressBarCPU.ProgressWidth = 25;
             this.circularProgressBarCPU.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBarCPU.Size = new System.Drawing.Size(280, 280);
+            this.circularProgressBarCPU.Size = new System.Drawing.Size(200, 200);
             this.circularProgressBarCPU.StartAngle = 270;
             this.circularProgressBarCPU.SubscriptColor = System.Drawing.Color.Transparent;
             this.circularProgressBarCPU.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -87,27 +87,28 @@
             this.circularProgressBarCPU.SuperscriptText = "";
             this.circularProgressBarCPU.TabIndex = 1;
             this.circularProgressBarCPU.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBarCPU.Value = 68;
             // 
             // labelCPUP
             // 
             this.labelCPUP.AutoSize = true;
             this.labelCPUP.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCPUP.Location = new System.Drawing.Point(219, 159);
+            this.labelCPUP.Location = new System.Drawing.Point(87, 98);
             this.labelCPUP.Name = "labelCPUP";
             this.labelCPUP.Size = new System.Drawing.Size(61, 42);
             this.labelCPUP.TabIndex = 2;
             this.labelCPUP.Text = "0%";
             // 
-            // Form1
+            // FormCPUMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(968, 565);
             this.Controls.Add(this.labelCPUP);
             this.Controls.Add(this.circularProgressBarCPU);
             this.Controls.Add(this.labelCPU);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormCPUMonitor";
+            this.Text = "CPU Monitor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
