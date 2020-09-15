@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-using WindowsFormsTest.Forms;
+using GaminghardwareMonitor.Forms;
 
-namespace WindowsFormsTest
+namespace GaminghardwareMonitor
 {
-    public partial class HWDashboard : Form
+    public partial class GaminghardwareMonitor : Form
     {
         //Fields
         private IconButton currentBtn;
@@ -21,7 +21,7 @@ namespace WindowsFormsTest
         private Form currentChildForm;
 
         //Constructor
-        public HWDashboard()
+        public GaminghardwareMonitor()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -86,7 +86,7 @@ namespace WindowsFormsTest
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(99, 209, 180));
-            OpenChildForm(new Form1());
+            OpenChildForm(new FormCPUMonitor());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)

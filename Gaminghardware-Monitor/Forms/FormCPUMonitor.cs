@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsTest.Forms
+namespace GaminghardwareMonitor.Forms
 {
-    public partial class Form1 : Form
+    public partial class FormCPUMonitor : Form
     {
-        public Form1()
+        public FormCPUMonitor()
         {
             InitializeComponent();
             circularProgressBarCPU.Value = 0;

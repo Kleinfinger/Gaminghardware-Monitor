@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsTest
+namespace GaminghardwareMonitor
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace WindowsFormsTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HWDashboard());
+            Application.Run(new GaminghardwareMonitor());
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsTest.Forms
+﻿namespace GaminghardwareMonitor.Forms
 {
-    partial class Form1
+    partial class FormCPUMonitor
     {
         /// <summary>
         /// Required designer variable.
