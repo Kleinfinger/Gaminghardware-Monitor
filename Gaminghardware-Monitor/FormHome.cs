@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using GaminghardwareMonitor.Forms;
+using WinFormAnimation;
 
 namespace GaminghardwareMonitor
 {
@@ -39,10 +40,11 @@ namespace GaminghardwareMonitor
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(48, 48, 48);
                 currentBtn.ForeColor = color;
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.TextAlign = ContentAlignment.MiddleRight;
                 currentBtn.IconColor = color;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //currentBtn.ImageAlign = ContentAlignment.MiddleCenter;
+                //currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                //currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 //Left border button
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
@@ -58,9 +60,9 @@ namespace GaminghardwareMonitor
             {
                 currentBtn.BackColor = Color.FromArgb(48, 48, 48);
                 currentBtn.ForeColor = Color.Gainsboro;
-                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = Color.Gainsboro;
-                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.TextImageRelation = TextImageRelation.Overlay;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }

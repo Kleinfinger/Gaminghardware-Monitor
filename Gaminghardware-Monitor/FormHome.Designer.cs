@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GaminghardwareMonitor));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -37,6 +38,7 @@
             this.panelHead = new System.Windows.Forms.Panel();
             this.iconButtonHome = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelHead.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +46,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.iconButton5);
             this.panelMenu.Controls.Add(this.iconButton4);
             this.panelMenu.Controls.Add(this.iconButton3);
@@ -180,13 +183,10 @@
             this.iconButtonCPU.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonCPU.Location = new System.Drawing.Point(0, 120);
             this.iconButtonCPU.Name = "iconButtonCPU";
-            this.iconButtonCPU.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButtonCPU.Rotation = 0D;
             this.iconButtonCPU.Size = new System.Drawing.Size(220, 85);
             this.iconButtonCPU.TabIndex = 1;
             this.iconButtonCPU.Text = "CPU Monitor";
-            this.iconButtonCPU.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonCPU.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonCPU.UseVisualStyleBackColor = false;
             this.iconButtonCPU.Click += new System.EventHandler(this.iconButtonCPU_Click);
             // 
@@ -228,6 +228,24 @@
             this.panelDesktop.Size = new System.Drawing.Size(984, 684);
             this.panelDesktop.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 545);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.button1.Size = new System.Drawing.Size(220, 85);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "CPU Monitor";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // GaminghardwareMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +272,7 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButtonHome;
         private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Button button1;
     }
 }
 
