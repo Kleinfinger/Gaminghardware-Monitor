@@ -71,10 +71,10 @@
             this.circularProgressBarCPU.Location = new System.Drawing.Point(12, 12);
             this.circularProgressBarCPU.MarqueeAnimationSpeed = 2000;
             this.circularProgressBarCPU.Name = "circularProgressBarCPU";
-            this.circularProgressBarCPU.OuterColor = System.Drawing.Color.Gainsboro;
+            this.circularProgressBarCPU.OuterColor = System.Drawing.Color.Silver;
             this.circularProgressBarCPU.OuterMargin = -25;
             this.circularProgressBarCPU.OuterWidth = 26;
-            this.circularProgressBarCPU.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(209)))), ((int)(((byte)(180)))));
+            this.circularProgressBarCPU.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(91)))), ((int)(((byte)(12)))));
             this.circularProgressBarCPU.ProgressWidth = 25;
             this.circularProgressBarCPU.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.circularProgressBarCPU.Size = new System.Drawing.Size(200, 200);
@@ -103,6 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(968, 565);
             this.Controls.Add(this.labelCPUP);
             this.Controls.Add(this.circularProgressBarCPU);

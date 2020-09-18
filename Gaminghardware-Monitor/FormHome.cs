@@ -37,7 +37,7 @@ namespace GaminghardwareMonitor
             {
                 DisableButton();
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(23, 50, 73);
+                currentBtn.BackColor = Color.FromArgb(48, 48, 48);
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -48,9 +48,7 @@ namespace GaminghardwareMonitor
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-                //Icon Current Child Form
-                iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = color;
+
             }
         }
 
@@ -58,7 +56,7 @@ namespace GaminghardwareMonitor
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(21, 44, 64);
+                currentBtn.BackColor = Color.FromArgb(48, 48, 48);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
@@ -81,35 +79,34 @@ namespace GaminghardwareMonitor
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitleChildForm.Text = childForm.Text;
         }
 
         private void iconButtonCPU_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(99, 209, 180));
+            ActivateButton(sender, Color.FromArgb(234, 91, 12));
             OpenChildForm(new FormCPUMonitor());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(99, 209, 180));
+            ActivateButton(sender, Color.FromArgb(234, 91, 12));
 
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(99, 209, 180));
+            ActivateButton(sender, Color.FromArgb(234, 91, 12));
 
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(99, 209, 180));
+            ActivateButton(sender, Color.FromArgb(234, 91, 12));
 
         }
         private void iconButton5_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(99, 209, 180));
+            ActivateButton(sender, Color.FromArgb(234, 91, 12));
 
         }
 
@@ -127,8 +124,6 @@ namespace GaminghardwareMonitor
         {
             DisableButton();
             leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            lblTitleChildForm.Text = "Home";
         }
 
     }

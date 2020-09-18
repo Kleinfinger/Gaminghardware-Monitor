@@ -36,19 +36,14 @@
             this.iconButtonCPU = new FontAwesome.Sharp.IconButton();
             this.panelHead = new System.Windows.Forms.Panel();
             this.iconButtonHome = new FontAwesome.Sharp.IconButton();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitleChildForm = new System.Windows.Forms.Label();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelHead.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.panelMenu.Controls.Add(this.iconButton5);
             this.panelMenu.Controls.Add(this.iconButton4);
             this.panelMenu.Controls.Add(this.iconButton3);
@@ -63,7 +58,7 @@
             // 
             // iconButton5
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton5.FlatAppearance.BorderSize = 0;
@@ -90,7 +85,7 @@
             // 
             // iconButton4
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton4.FlatAppearance.BorderSize = 0;
@@ -117,7 +112,7 @@
             // 
             // iconButton3
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton3.FlatAppearance.BorderSize = 0;
@@ -144,7 +139,7 @@
             // 
             // iconButton2
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton2.FlatAppearance.BorderSize = 0;
@@ -171,7 +166,7 @@
             // 
             // iconButtonCPU
             // 
-            this.iconButtonCPU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.iconButtonCPU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.iconButtonCPU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonCPU.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonCPU.FlatAppearance.BorderSize = 0;
@@ -207,7 +202,7 @@
             // 
             // iconButtonHome
             // 
-            this.iconButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.iconButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.iconButtonHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.iconButtonHome.FlatAppearance.BorderSize = 0;
@@ -224,47 +219,13 @@
             this.iconButtonHome.UseVisualStyleBackColor = false;
             this.iconButtonHome.Click += new System.EventHandler(this.iconButtonHome_Click);
             // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-            this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
-            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(984, 80);
-            this.panelTitleBar.TabIndex = 1;
-            // 
-            // lblTitleChildForm
-            // 
-            this.lblTitleChildForm.AutoSize = true;
-            this.lblTitleChildForm.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(52, 30);
-            this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(52, 19);
-            this.lblTitleChildForm.TabIndex = 1;
-            this.lblTitleChildForm.Text = "Home";
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.Transparent;
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(209)))), ((int)(((byte)(180)))));
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(209)))), ((int)(((byte)(180)))));
-            this.iconCurrentChildForm.IconSize = 40;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 20);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(40, 40);
-            this.iconCurrentChildForm.TabIndex = 0;
-            this.iconCurrentChildForm.TabStop = false;
-            // 
             // panelDesktop
             // 
+            this.panelDesktop.BackColor = System.Drawing.Color.Gainsboro;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 80);
+            this.panelDesktop.Location = new System.Drawing.Point(220, 0);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(984, 604);
+            this.panelDesktop.Size = new System.Drawing.Size(984, 684);
             this.panelDesktop.TabIndex = 2;
             // 
             // GaminghardwareMonitor
@@ -273,15 +234,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 684);
             this.Controls.Add(this.panelDesktop);
-            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "GaminghardwareMonitor";
             this.Text = "Gaminghardware-Monitor";
             this.panelMenu.ResumeLayout(false);
             this.panelHead.ResumeLayout(false);
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,9 +253,6 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButtonHome;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
-        private System.Windows.Forms.Label lblTitleChildForm;
         private System.Windows.Forms.Panel panelDesktop;
     }
 }
