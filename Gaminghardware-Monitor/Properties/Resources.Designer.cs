@@ -103,9 +103,79 @@ namespace GaminghardwareMonitor.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cpu_v2_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("cpu_v2_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cpu_v2_60x60 {
+            get {
+                object obj = ResourceManager.GetObject("cpu_v2_60x60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cpu_v3_grau {
             get {
                 object obj = ResourceManager.GetObject("cpu_v3_grau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GHM_v1 {
+            get {
+                object obj = ResourceManager.GetObject("GHM_v1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GHM_v1_120x120 {
+            get {
+                object obj = ResourceManager.GetObject("GHM_v1_120x120", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GHM_v1_60x60 {
+            get {
+                object obj = ResourceManager.GetObject("GHM_v1_60x60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GHM_v2 {
+            get {
+                object obj = ResourceManager.GetObject("GHM_v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GHM_v2_120x120 {
+            get {
+                object obj = ResourceManager.GetObject("GHM_v2_120x120", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -129,7 +199,11 @@ namespace GaminghardwareMonitor.Properties {
         ///    &lt;resheader name=&quot;resmimetype&quot;&gt;text/microsoft-resx&lt;/resheader&gt;
         ///    &lt;resheader n [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
-        
+        //internal static string Resources {
+        //    get {
+        //        return ResourceManager.GetString("Resources", resourceCulture);
+        //    }
+        //}
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die //------------------------------------------------------------------------------
