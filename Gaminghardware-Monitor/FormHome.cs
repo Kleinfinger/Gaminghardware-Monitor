@@ -145,7 +145,7 @@ namespace GaminghardwareMonitor
                     hardware.Update();
                     foreach (var sensors in hardware.Sensors)
                     {
-                        if (sensors.SensorType == SensorType.Load)
+                        if (sensors.SensorType == SensorType.Temperature)
                         {
                             Console.WriteLine(sensors.Name + ": " + sensors.Value);
                         }
