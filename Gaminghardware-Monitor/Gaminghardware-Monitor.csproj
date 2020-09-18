@@ -56,7 +56,7 @@
       <HintPath>..\packages\FontAwesome.Sharp.5.14.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="OpenHardwareMonitorLib">
-      <HintPath>E:\Users\miche\Downloads\OpenHardwareMonitor\OpenHardwareMonitorLib.dll</HintPath>
+      <HintPath>..\libs\OpenHardwareMonitorLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -130,7 +130,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\GHM_v1.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cpu_v1.png" />
   </ItemGroup>
@@ -139,6 +141,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cpu_v3_grau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GHM_v1_120x120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu_v2_60x60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu_v2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GHM_v1_60x60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GHM_v2_120x120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GHM_v2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

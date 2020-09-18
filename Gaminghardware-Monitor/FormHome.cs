@@ -31,6 +31,7 @@ namespace GaminghardwareMonitor
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 85);
             panelMenu.Controls.Add(leftBorderBtn);
+            iconButtonHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
         }
 
         //Mehods

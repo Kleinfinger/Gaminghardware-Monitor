@@ -36,10 +36,11 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButtonCPU = new FontAwesome.Sharp.IconButton();
             this.panelHead = new System.Windows.Forms.Panel();
-            this.iconButtonHome = new FontAwesome.Sharp.IconButton();
+            this.iconButtonHome = new System.Windows.Forms.PictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelHead.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconButtonHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -66,6 +67,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 12F);
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Image = global::GaminghardwareMonitor.Properties.Resources.cpu_v2_60x60;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 545);
             this.button1.Name = "button1";
@@ -73,6 +75,7 @@
             this.button1.Size = new System.Drawing.Size(220, 85);
             this.button1.TabIndex = 6;
             this.button1.Text = "CPU Monitor";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -97,8 +100,7 @@
             this.iconButton5.Size = new System.Drawing.Size(220, 85);
             this.iconButton5.TabIndex = 5;
             this.iconButton5.Text = "iconButton5";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton5.UseVisualStyleBackColor = false;
             this.iconButton5.Visible = false;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
@@ -222,19 +224,12 @@
             this.iconButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.iconButtonHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButtonHome.FlatAppearance.BorderSize = 0;
-            this.iconButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonHome.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButtonHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButtonHome.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonHome.IconSize = 50;
+            this.iconButtonHome.Image = global::GaminghardwareMonitor.Properties.Resources.GHM_v2_120x120;
             this.iconButtonHome.Location = new System.Drawing.Point(0, 0);
             this.iconButtonHome.Name = "iconButtonHome";
-            this.iconButtonHome.Rotation = 0D;
             this.iconButtonHome.Size = new System.Drawing.Size(220, 120);
             this.iconButtonHome.TabIndex = 0;
-            this.iconButtonHome.UseVisualStyleBackColor = false;
-            this.iconButtonHome.Click += new System.EventHandler(this.iconButtonHome_Click);
+            this.iconButtonHome.TabStop = false;
             // 
             // panelDesktop
             // 
@@ -256,6 +251,7 @@
             this.Text = "Gaminghardware-Monitor";
             this.panelMenu.ResumeLayout(false);
             this.panelHead.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconButtonHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,9 +265,9 @@
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButtonHome;
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox iconButtonHome;
     }
 }
 
