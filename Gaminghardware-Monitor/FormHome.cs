@@ -7,10 +7,12 @@ using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using GaminghardwareMonitor.Forms;
+using OpenHardwareMonitor.Hardware;
 using WinFormAnimation;
 
 namespace GaminghardwareMonitor
@@ -128,5 +130,35 @@ namespace GaminghardwareMonitor
             leftBorderBtn.Visible = false;
         }
 
+        private void doWork()
+        {
+            Computer c = new Computer()
+            {
+                CPUEnabled = true
+            };
+            c.Open();
+
+            foreach (var hardware in c.Hardware)
+            {
+                if (hardware.HardwareType == HardwareType.CPU)
+                {
+                    hardware.Update();
+                    foreach (var sensors in hardware.Sensors)
+                    {
+                        if (sensors.SensorType == SensorType.Load)
+                        {
+                            Console.WriteLine(sensors.Name + ": " + sensors.Value);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Thread newThread = new Thread(doWork);
+            newThread.Start();
+        }
     }
+    
 }
