@@ -230,6 +230,9 @@
             this.iconButtonHome.Size = new System.Drawing.Size(220, 120);
             this.iconButtonHome.TabIndex = 0;
             this.iconButtonHome.TabStop = false;
+            this.iconButtonHome.Click += new System.EventHandler(this.iconButtonHome_Click);
+            this.iconButtonHome.MouseLeave += new System.EventHandler(this.iconButtonHome_MouseLeave);
+            this.iconButtonHome.MouseHover += new System.EventHandler(this.iconButtonHome_MouseHover);
             // 
             // panelDesktop
             // 
@@ -239,6 +242,7 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(984, 684);
             this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Click += new System.EventHandler(this.iconButtonHome_Click);
             // 
             // GaminghardwareMonitor
             // 

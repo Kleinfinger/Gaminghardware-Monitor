@@ -20,6 +20,7 @@ namespace GaminghardwareMonitor
     public partial class GaminghardwareMonitor : Form
     {
         //Fields
+        private PictureBox currentPbox;
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
@@ -159,6 +160,18 @@ namespace GaminghardwareMonitor
         {
             Thread newThread = new Thread(doWork);
             newThread.Start();
+        }
+
+        private void iconButtonHome_MouseHover(object sender, EventArgs e)
+        {
+            currentPbox = (PictureBox)sender;
+            currentPbox.BackColor = Color.FromArgb(57, 57, 57);
+        }
+
+        private void iconButtonHome_MouseLeave(object sender, EventArgs e)
+        {
+            currentPbox = (PictureBox)sender;
+            currentPbox.BackColor = Color.FromArgb(48, 48, 48);
         }
     }
     
