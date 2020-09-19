@@ -21,9 +21,12 @@ namespace GaminghardwareMonitor
     {
         //Fields
         private PictureBox currentPbox;
-        private IconButton currentBtn;
+        private Button currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
+        public FormCPUMonitor formCPUMonitor { get; }
+
 
         //Constructor
         public GaminghardwareMonitor()
@@ -32,7 +35,8 @@ namespace GaminghardwareMonitor
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 85);
             panelMenu.Controls.Add(leftBorderBtn);
-            iconButtonHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            buttonHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            formCPUMonitor = new FormCPUMonitor();
         }
 
         //Mehods
@@ -41,20 +45,14 @@ namespace GaminghardwareMonitor
             if(senderBtn != null)
             {
                 DisableButton();
-                currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(48, 48, 48);
+                currentBtn = (Button)senderBtn;
+                currentBtn.BackColor = Color.FromArgb(57, 57, 57);
                 currentBtn.ForeColor = color;
-                currentBtn.TextAlign = ContentAlignment.MiddleRight;
-                currentBtn.IconColor = color;
-                //currentBtn.ImageAlign = ContentAlignment.MiddleCenter;
-                //currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                //currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-                //Left border button
+                currentBtn.Padding = new Padding(25, 0, 20, 0);
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-
             }
         }
 
@@ -64,10 +62,7 @@ namespace GaminghardwareMonitor
             {
                 currentBtn.BackColor = Color.FromArgb(48, 48, 48);
                 currentBtn.ForeColor = Color.Gainsboro;
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = Color.Gainsboro;
-                currentBtn.TextImageRelation = TextImageRelation.Overlay;
-                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                currentBtn.Padding = new Padding(10, 0, 35, 0);
             }
         }
 
@@ -87,38 +82,10 @@ namespace GaminghardwareMonitor
             childForm.Show();
         }
 
-        private void iconButtonCPU_Click(object sender, EventArgs e)
+        private void buttonHome_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(234, 91, 12));
-            OpenChildForm(new FormCPUMonitor());
-        }
 
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(234, 91, 12));
-
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(234, 91, 12));
-
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(234, 91, 12));
-
-        }
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(234, 91, 12));
-
-        }
-
-        private void iconButtonHome_Click(object sender, EventArgs e)
-        {
-            if(currentChildForm != null)
+            if (currentChildForm != null)
             {
                 currentChildForm.Close();
                 Reset();
@@ -130,6 +97,14 @@ namespace GaminghardwareMonitor
         {
             DisableButton();
             leftBorderBtn.Visible = false;
+        }
+
+        private void buttonCPU_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(234, 91, 12));
+            OpenChildForm(new FormCPUMonitor());
+            Thread newThread = new Thread(doWork);
+            newThread.Start();
         }
 
         private void doWork()
@@ -154,12 +129,6 @@ namespace GaminghardwareMonitor
                     }
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Thread newThread = new Thread(doWork);
-            newThread.Start();
         }
 
         private void iconButtonHome_MouseHover(object sender, EventArgs e)
