@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GaminghardwareMonitor));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonCPU = new System.Windows.Forms.Button();
             this.panelHead = new System.Windows.Forms.Panel();
@@ -111,6 +112,7 @@
             this.ClientSize = new System.Drawing.Size(1204, 684);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GaminghardwareMonitor";
             this.Text = "Gaminghardware-Monitor";
             this.panelMenu.ResumeLayout(false);
