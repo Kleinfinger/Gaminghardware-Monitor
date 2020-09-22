@@ -25,8 +25,12 @@ namespace GaminghardwareMonitor
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
-        public FormCPUMonitor formCPUMonitor { get; }
+        private FormCPUMonitor formCPUMonitor;
 
+        public void setFormCPUMonitor()
+        {
+            this.formCPUMonitor = new FormCPUMonitor();
+        }
 
         //Constructor
         public GaminghardwareMonitor()
@@ -36,7 +40,7 @@ namespace GaminghardwareMonitor
             leftBorderBtn.Size = new Size(7, 85);
             panelMenu.Controls.Add(leftBorderBtn);
             buttonHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            formCPUMonitor = new FormCPUMonitor();
+            setFormCPUMonitor();
         }
 
         //Mehods

@@ -29,13 +29,14 @@ namespace GaminghardwareMonitor.Forms
             circularProgressBarCPU.Value = (int)fcpu;
             labelCPUP.Text = string.Format("{0:0}%", fcpu);
 
-            //Thread newThread = new Thread(delegate () { cpuTemp(); });
+            Thread t = new Thread(cpuTemp);
+            t.Start();
 
-            circularProgressBarCPUTemp.Value = (int)cpuTemp();
-            labelCPUTemp.Text = string.Format("{0:0}°C", cpuTemp());
+            //circularProgressBarCPUTemp.Value = (int)cpuTemp();
+            //labelCPUTemp.Text = string.Format("{0:0}°C", cpuTemp());
         }
 
-        private float cpuTemp()
+        private void cpuTemp()
         {
             float tcpu = 0;
 
@@ -63,7 +64,13 @@ namespace GaminghardwareMonitor.Forms
                     }
                 }
             }
-            return tcpu;
+
+            circularProgressBarCPUTemp.Invoke((MethodInvoker)(() => circularProgressBarCPUTemp.Value = (int)tcpu));
+            labelCPUTemp.Invoke((MethodInvoker)(() => labelCPUTemp.Text = string.Format("{0:0}°C", tcpu)));
+
+            //circularProgressBarCPUTemp.Value = (int)tcpu;
+            //labelCPUTemp.Text = string.Format("{0:0}°C", tcpu);
+            //return tcpu;
         }
 
         private void Form1_Load(object sender, EventArgs e)
