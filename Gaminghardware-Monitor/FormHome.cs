@@ -109,31 +109,6 @@ namespace GaminghardwareMonitor
             OpenChildForm(new FormCPUMonitor());
         }
 
-        //private void doWork()
-        //{
-        //    Computer c = new Computer();
-        //    c.MainboardEnabled = true;
-        //    c.CPUEnabled = true;
-        //    c.GPUEnabled = true;
-        //    c.RAMEnabled = true;
-        //    c.Open();
-
-        //    foreach (var hardware in c.Hardware)
-        //    {
-        //        if (hardware.HardwareType == HardwareType.CPU || hardware.HardwareType == HardwareType.GpuNvidia)
-        //        {
-        //            hardware.Update();
-        //            foreach (var sensors in hardware.Sensors)
-        //            {
-        //                if (sensors.SensorType == SensorType.Temperature)
-        //                {
-        //                    Console.WriteLine(sensors.Name + ": " + sensors.Value);
-        //            }
-        //        }
-        //        }
-        //    }
-        //}
-
         private void iconButtonHome_MouseHover(object sender, EventArgs e)
         {
             currentPbox = (PictureBox)sender;

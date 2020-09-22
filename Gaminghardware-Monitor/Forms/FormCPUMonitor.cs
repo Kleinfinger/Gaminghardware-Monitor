@@ -28,11 +28,6 @@ namespace GaminghardwareMonitor.Forms
 
             Thread thCPU_Temp = new Thread(cpuTemp);
             thCPU_Temp.Start();
-
-            //circularProgressBarCPU.Value = 0;
-            //circularProgressBarCPUTemp.Value = 0;
-            //circularProgressBarCPUTemp.Value = (int)cpuTemp();
-            //labelCPUTemp.Text = string.Format("{0:0}°C", cpuTemp());
         }
 
         private void cpuUsage()
@@ -63,9 +58,7 @@ namespace GaminghardwareMonitor.Forms
                         if (sensors.SensorType == SensorType.Temperature && sensors.Name.Equals("CPU Package"))
                         {
                             tcpu = (float)sensors.Value;
-                            //circularProgressBarCPUTemp.Value = (int)tcpu;
-                            //labelCPUTemp.Text = string.Format("{0:0}°C", tcpu);
-                            Console.WriteLine(sensors.Name + ": " + sensors.Value);
+                            //Console.WriteLine(sensors.Name + ": " + sensors.Value);
                         }
                     }
                 }
@@ -73,10 +66,6 @@ namespace GaminghardwareMonitor.Forms
 
             circularProgressBarCPUTemp.Invoke((MethodInvoker)(() => circularProgressBarCPUTemp.Value = (int)tcpu));
             labelCPUTemp.Invoke((MethodInvoker)(() => labelCPUTemp.Text = string.Format("{0:0}°C", tcpu)));
-
-            //circularProgressBarCPUTemp.Value = (int)tcpu;
-            //labelCPUTemp.Text = string.Format("{0:0}°C", tcpu);
-            //return tcpu;
         }
 
         private void Form1_Load(object sender, EventArgs e)
