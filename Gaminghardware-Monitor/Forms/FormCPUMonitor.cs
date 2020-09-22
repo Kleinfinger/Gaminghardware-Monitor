@@ -23,17 +23,23 @@ namespace GaminghardwareMonitor.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Thread thCPU_Usage = new Thread(cpuUsage);
+            thCPU_Usage.Start();
+
+            Thread thCPU_Temp = new Thread(cpuTemp);
+            thCPU_Temp.Start();
+
             //circularProgressBarCPU.Value = 0;
             //circularProgressBarCPUTemp.Value = 0;
-            float fcpu = pCPU.NextValue();
-            circularProgressBarCPU.Value = (int)fcpu;
-            labelCPUP.Text = string.Format("{0:0}%", fcpu);
-
-            Thread t = new Thread(cpuTemp);
-            t.Start();
-
             //circularProgressBarCPUTemp.Value = (int)cpuTemp();
             //labelCPUTemp.Text = string.Format("{0:0}°C", cpuTemp());
+        }
+
+        private void cpuUsage()
+        {
+            float fcpu = pCPU.NextValue();
+            circularProgressBarCPU.Invoke((MethodInvoker)(() => circularProgressBarCPU.Value = (int)fcpu));
+            labelCPUP.Invoke((MethodInvoker)(() => labelCPUP.Text = string.Format("{0:0}%", fcpu)));
         }
 
         private void cpuTemp()
