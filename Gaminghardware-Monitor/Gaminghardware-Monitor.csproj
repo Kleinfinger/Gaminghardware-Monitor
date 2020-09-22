@@ -77,24 +77,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormHome.cs">
+    <Compile Include="Forms\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHome.Designer.cs">
+    <Compile Include="Forms\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormCPUMonitor.cs">
+    <Compile Include="Forms\ChildForms\FormCPUMonitor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormCPUMonitor.Designer.cs">
+    <Compile Include="Forms\ChildForms\FormCPUMonitor.Designer.cs">
       <DependentUpon>FormCPUMonitor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormHome.resx">
+    <EmbeddedResource Include="Forms\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormCPUMonitor.resx">
+    <EmbeddedResource Include="Forms\ChildForms\FormCPUMonitor.resx">
       <DependentUpon>FormCPUMonitor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -162,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GHM_v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
